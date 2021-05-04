@@ -44,8 +44,21 @@ export class BieuThucBuilder{
     }
 
     public build():BieuThucMenhDe{
+        if(Helper.IS_BIEU_THUC_SO_CAP(this.bieuThuc)){
+            let bt:BieuThucMenhDe= Helper.BIEU_THUC_SO_CAP(this.bieuThuc.id);
+            bt.cha = this.bieuThuc.cha;
+            return bt;
+        }
+        if(this.bieuThuc.toanTu.tenToanTu !== ToanTu.PHU_DINH && this.bieuThuc.bieuThucCons.length === 1){
+            let bt:BieuThucMenhDe= Helper.BIEU_THUC_SO_CAP(this.bieuThuc.bieuThucCons[0].id);
+            bt.cha = this.bieuThuc.cha;
+            return bt;
+        }
         return this.bieuThuc;
     }
 
+    sizeBuilder ():number{
+        return this.bieuThuc.bieuThucCons.length;
+    }
 
 }

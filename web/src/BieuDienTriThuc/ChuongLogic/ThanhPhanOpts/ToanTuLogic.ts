@@ -1,6 +1,11 @@
 import {BieuThucMenhDe} from "../ThanhPhanC/BieuThucMenhDe";
 abstract class ToanTu {
-    protected kyHieu :string;
+    private _kyHieu: string;
+    
+    public get kyHieu(): string {
+        return this._kyHieu;
+    }
+    
     private _tenToanTu: number = -1;
     
     static NONE:number = -1;
@@ -13,7 +18,7 @@ abstract class ToanTu {
 
 
     constructor(kyHieu:string){
-        this.kyHieu = kyHieu;
+        this._kyHieu = kyHieu;
     }
     abstract tinhToan(bieuThuc:BieuThucMenhDe):boolean;
 
