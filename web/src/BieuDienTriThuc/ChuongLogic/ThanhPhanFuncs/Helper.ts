@@ -68,9 +68,12 @@ export class Helper{
     }
 
     static SAO_CHEP(P:BieuThucMenhDe):BieuThucMenhDe{
-        if(this.IS_BIEU_THUC_SO_CAP(P)) return P;
+        if(this.IS_BIEU_THUC_SO_CAP(P)) return new BieuThucBuilder().addID(P.id).addToanTu(P.toanTu.tenToanTu).build() ;
         let rs = new BieuThucMenhDe();
         rs.bieuThucCons = P.bieuThucCons;
+        for(let i:number = 0 ;i<rs.bieuThucCons.length;i++){
+            rs.bieuThucCons[i] = this.SAO_CHEP(P.bieuThucCons[i]);
+        }
         rs.toanTu = P.toanTu;
         return rs;
     }

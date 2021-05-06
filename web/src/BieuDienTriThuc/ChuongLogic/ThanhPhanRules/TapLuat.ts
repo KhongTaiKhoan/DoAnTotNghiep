@@ -69,6 +69,8 @@ export class TapLuat {
                                          .addToanTu(ToanTu.TUYEN)
                                          .addCha(P.cha)
                                          .build();
+                                         
+                    // console.log(rs.id);                     
                     return rs; 
                 }
             }())

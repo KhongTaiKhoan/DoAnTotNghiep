@@ -31,7 +31,9 @@ abstract class ToanTu {
         this._tenToanTu = value;
     }
     toString(){
+        if(this.tenToanTu !== ToanTu.NONE)
         return this._tenToanTu+"";
+        return "";
     }
 }
 

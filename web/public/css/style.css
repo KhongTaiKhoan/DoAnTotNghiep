@@ -87,3 +87,11 @@ html {
   text-align: center;
   margin-top: 0;
 }
+
+.tien-de-giai{
+  background-color: white;
+  border: .5px rgb(197, 197, 197) solid;
+  border-radius: 3px;
+  padding: .5rem 2rem;
+  margin-bottom: .4rem;
+}

@@ -18,6 +18,7 @@ export class RutGonBieuThuc extends BaiTap{
 
         this.root= this.rutGon(this.root,null,-1);
         this.loiGia.ketQua = this.root;
+        // console.log(this.loiGia.loiGiai[0]);
         return this.loiGia;
         
     }
@@ -38,7 +39,6 @@ export class RutGonBieuThuc extends BaiTap{
                 P.bieuThucCons[i].cha = P;
 
             }
-
             let rs = this.tapLuat.duyetTapLuat(P, luatDuyetRoi);
             if (rs.idLuat !== -1) {
                 let p_id:string = P.id;
@@ -52,11 +52,13 @@ export class RutGonBieuThuc extends BaiTap{
                     if (BieuThucChuyenDoi !== null){
                         this.loiGia.loiGiai.push({
                             idLuat: rs.idLuat,
-                            bieuThucGoc: BieuThucChuyenDoi,
-                            bieuThucApDung: rs.bieuThucCon,
-                            bieuThucKetQua: P
+                            bieuThucGoc: Helper.IN(BieuThucChuyenDoi),
+                            bieuThucGoc_id: BieuThucChuyenDoi.id,
+                            bieuThucApDung:Helper.IN( rs.bieuThucCon),
+                            bieuThucKetQua: Helper.IN(P)
                         });
                     // console.log(`- Ap dung ${this.tapLuat.getLuat(rs.idLuat-1).tenLuat} cho ${rs.bieuThucCon.id}:\nDuoc ${P.id} \nNEN TA CO ${BieuThucChuyenDoi.id}\n`)    
+                    
                  }
                 }
 
@@ -83,7 +85,8 @@ export class RutGonBieuThuc extends BaiTap{
     }
 
     capNhat(P:BieuThucMenhDe):BieuThucMenhDe|null{
-        let node:BieuThucMenhDe = P;
+        let node:BieuThucMenhDe = Helper.SAO_CHEP(P);
+        node.cha = P.cha;
         for(let i:number=this.truyVet.length-1;i>=0;i--){
            if(node.cha === null || this.truyVet[i] ==-1) {
             //    console.log(this.root.id)
