@@ -1,4 +1,4 @@
-import { BieuThucMenhDe } from "../../BieuDienTriThuc/ChuongLogic/ThanhPhanC/BieuThucMenhDe";
+import { BieuThucMenhDe } from "../../ChuongLogic/ThanhPhanC/BieuThucMenhDe";
 
 export class LoiGiaiChuyenDoi{
     public loiGiai:{

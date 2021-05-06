@@ -43,6 +43,40 @@ class ToanTuFactory {
                 }();
         }
     }
+    
+    create2(loaiToanTu: string) {
+        switch (loaiToanTu) {
+            case '\u00AC':
+                return new PhuDinh();
+                break;
+
+            case '\u2194':
+                return new TuongDuong();
+                break;
+
+            case '\u2192':
+                return new KeoTheo();
+                break;
+
+            case '\u2227':
+                return new Hoi();
+                break;
+
+            case '\u2228':
+                return new Tuyen();
+                break;
+                
+            default:
+                return new class extends ToanTu {
+                    constructor() {
+                        super("");
+                    }
+                    tinhToan(_bieuThuc: BieuThucMenhDe): boolean {
+                        return false;
+                    }
+                }();
+        }
+    }
 }
 
 export { ToanTuFactory }

@@ -3,7 +3,7 @@ import { ToanTu } from "./ToanTuLogic";
 
 export class KeoTheo extends ToanTu{
     constructor(){
-        super('&rarr;');
+        super('\u2192');
         this.tenToanTu = ToanTu.KEO_THEO;
 
     }

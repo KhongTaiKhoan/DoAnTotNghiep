@@ -3,7 +3,7 @@ import { ToanTu } from "./ToanTuLogic";
 
 export class Tuyen extends ToanTu{
     constructor(){
-        super('&or;');
+        super('\u2228');
         this.tenToanTu = ToanTu.TUYEN;
     }
 

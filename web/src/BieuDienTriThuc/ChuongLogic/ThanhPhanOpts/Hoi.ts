@@ -3,7 +3,7 @@ import { ToanTu } from "./ToanTuLogic";
 
 export class Hoi extends ToanTu{
     constructor(){
-        super('&and;');
+        super('\u2227');
         this.tenToanTu = ToanTu.HOI;
     }
     tinhToan(bieuThuc: BieuThucMenhDe): boolean {

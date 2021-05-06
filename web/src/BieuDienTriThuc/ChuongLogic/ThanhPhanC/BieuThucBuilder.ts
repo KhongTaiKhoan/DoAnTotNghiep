@@ -46,6 +46,7 @@ export class BieuThucBuilder{
     public build():BieuThucMenhDe{
         if(Helper.IS_BIEU_THUC_SO_CAP(this.bieuThuc)){
             let bt:BieuThucMenhDe= Helper.BIEU_THUC_SO_CAP(this.bieuThuc.id);
+            // bt.toanTu = this.bieuThuc.toanTu;
             bt.cha = this.bieuThuc.cha;
             return bt;
         }

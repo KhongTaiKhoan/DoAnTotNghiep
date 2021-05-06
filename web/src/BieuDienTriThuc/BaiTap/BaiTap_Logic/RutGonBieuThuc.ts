@@ -1,6 +1,6 @@
-import { BieuThucMenhDe } from "../../BieuDienTriThuc/ChuongLogic/ThanhPhanC/BieuThucMenhDe"
-import { Helper } from '../../BieuDienTriThuc/ChuongLogic/ThanhPhanFuncs/Helper';
-import { TapLuat } from '../../BieuDienTriThuc/ChuongLogic/ThanhPhanRules/TapLuat';
+import { BieuThucMenhDe } from "../../ChuongLogic/ThanhPhanC/BieuThucMenhDe"
+import { Helper } from '../../ChuongLogic/ThanhPhanFuncs/Helper';
+import { TapLuat } from '../../ChuongLogic/ThanhPhanRules/TapLuat';
 import { BaiTap } from '../BaiTap';
 import { LoiGiaiChuyenDoi } from './LoiGiaiChuyenDoi';
 

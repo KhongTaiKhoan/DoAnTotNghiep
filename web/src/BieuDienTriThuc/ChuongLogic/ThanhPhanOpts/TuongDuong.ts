@@ -4,7 +4,7 @@ import { ToanTu } from "./ToanTuLogic";
 export class TuongDuong extends ToanTu{
 
     constructor(){
-        super('&harr;');
+        super('\u2194');
         this.tenToanTu = ToanTu.TUONG_DUONG;
     }
     tinhToan(bieuThuc: BieuThucMenhDe): boolean {

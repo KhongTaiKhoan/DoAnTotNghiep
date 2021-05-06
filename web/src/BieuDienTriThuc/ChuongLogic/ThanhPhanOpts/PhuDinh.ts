@@ -3,7 +3,7 @@ import {ToanTu} from "./ToanTuLogic";
 export class PhuDinh extends ToanTu{
 
     constructor(){
-        super('&not;');
+        super('\u00AC');
         this.tenToanTu = ToanTu.PHU_DINH;
     }
     tinhToan(bieuThuc:BieuThucMenhDe): boolean {

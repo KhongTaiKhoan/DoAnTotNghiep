@@ -1,5 +1,7 @@
 import {BieuThucMenhDe} from "../ThanhPhanC/BieuThucMenhDe";
 abstract class ToanTu {
+    
+    public static  kyHieus:string[] = ['\u00AC','\u2194','\u2192','\u2228','\u2227'] ;
     private _kyHieu: string;
     
     public get kyHieu(): string {

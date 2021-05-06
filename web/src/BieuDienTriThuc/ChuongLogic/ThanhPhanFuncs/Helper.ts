@@ -113,12 +113,13 @@ export class Helper{
         
     }
 
-
     static  IN (P:BieuThucMenhDe):string{
         if (Helper.IS_BIEU_THUC_SO_CAP(P)) {
             if (P.toanTu.tenToanTu == ToanTu.PHU_DINH) {
                 return P.toanTu.kyHieu + `${P.id.split('0')[1]}`;
             } else {
+                if(P.id.includes('0'))
+                return ToanTu.kyHieus[0] + `${P.id.split('0')[1]}`;
                 return P.id;
             }
         }
